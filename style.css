@@ -1,0 +1,32 @@
+*{
+    background-color: #C68EFD;
+    font-family:'Times New Roman', Times, serif;
+    justify-content: center;
+    text-align: center;
+}
+ 
+h1{
+    color:#0f6e4d;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.player {
+    padding: 10% 15% 10% 15%;
+
+}
+
+.playzone {
+    display: flex;
+    justify-items: center;
+}
+
+h3,h2,h4{
+    color:#0118D8;
+    
+}
+.scoreboard{
+    display: grid;
+}
+.events{
+    width: 200px;
+}
