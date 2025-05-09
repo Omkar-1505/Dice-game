@@ -1,4 +1,4 @@
-var x = Math.floor(Math.random()*6) + 1;
+/*var x = Math.floor(Math.random()*6) + 1;
 document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
 
 var y = Math.floor(Math.random()*6) + 1;
@@ -12,4 +12,70 @@ else if (x>y){
 }
 else{
     document.querySelector(".results").innerHTML="PLAYER 2 WINS THE MATCH";
+}*/
+var x = Math.floor(Math.random() * 6) + 1;
+document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
+
+var y = Math.floor(Math.random() * 6) + 1;
+document.querySelector(".player2img").innerHTML = '<img src="images/dice' + y + '.png">';
+
+if (x === y) {
+    document.querySelector(".results").innerHTML = "IT IS A DRAW";
+} else if (x > y) {
+    document.querySelector(".results").innerHTML = "PLAYER 1 WINS THE MATCH";
+} else {
+    document.querySelector(".results").innerHTML = "PLAYER 2 WINS THE MATCH";
 }
+
+// Add a grid under the class scoreboard
+var scoreboard = document.querySelector(".scoreboard");
+var gridContent=` 
+    <div class="grid">
+        <div class="cell">Player 1</div>
+        <div class="cell">Player 2</div>
+`;   
+for( var i = 0; i<4 ; i++){
+    if(x>y){
+        gridcontent +=`
+            <div class="cell">W</div>
+            <div class="cell">L</div>
+        `;
+    }
+    else if(y>x){
+        gridcontent +=`
+            <div class="cell">L</div>
+            <div class="cell">w</div>
+        `;
+    }
+    if(x===y){
+        gridcontent +=`
+            <div class="cell">D</div>
+            <div class="cell">D</div>
+        `;
+    }
+    else{
+        gridContent+=`
+            <div class="cell">Not Working</div>
+            <div class="cell">Not Working</div>
+        `;
+    }
+    gridContent += `</div>`
+}
+scoreboard.innerHTML=gridContent;
+// Add CSS for the grid
+var style = document.createElement("style");
+style.innerHTML = `
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .cell {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-weight: bold;
+    }
+`;
+document.head.appendChild(style);
