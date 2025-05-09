@@ -11,7 +11,8 @@ if (x === y) {
 } else {
     document.querySelector(".results").innerHTML = "PLAYER 2 WINS THE MATCH !!!";
 }
-
+var c;
+var d;
 // Adding a grid under the class scoreboard
 var scoreboard = document.querySelector(".scoreboard");
 var gridContent=`
@@ -25,12 +26,14 @@ for( var i = 0; i<4 ; i++){
             <div class="cell">W</div>
             <div class="cell">L</div>
         `;
+        c+=1;
     }
     else if(y>x){
         gridContent +=`
             <div class="cell">L</div>
             <div class="cell">w</div>
         `;
+        d+=1;
     }
     if(x===y){
         gridContent +=`
@@ -64,3 +67,9 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+if(c>d){
+    document.querySelector(".results") = "PLAYER 1 WINS THE SERIES";
+}
+else{
+    document.querySelector(".results") = "PLAYER 2 WINS THE SERIES";
+}
