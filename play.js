@@ -1,18 +1,3 @@
-/*var x = Math.floor(Math.random()*6) + 1;
-document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
-
-var y = Math.floor(Math.random()*6) + 1;
-document.querySelector(".player2img").innerHTML = '<img src="images/dice' + y + '.png">';
-
-if (x===y){
-    document.querySelector(".results").innerHTML="IT IS A DRAW";
-}
-else if (x>y){
-    document.querySelector(".results").innerHTML="PLAYER 1 WINS THE MATCH";
-}
-else{
-    document.querySelector(".results").innerHTML="PLAYER 2 WINS THE MATCH";
-}*/
 var x = Math.floor(Math.random() * 6) + 1;
 document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
 
@@ -22,33 +7,33 @@ document.querySelector(".player2img").innerHTML = '<img src="images/dice' + y + 
 if (x === y) {
     document.querySelector(".results").innerHTML = "IT IS A DRAW";
 } else if (x > y) {
-    document.querySelector(".results").innerHTML = "PLAYER 1 WINS THE MATCH";
+    document.querySelector(".results").innerHTML = "PLAYER 1 WINS THE MATCH !!!";
 } else {
-    document.querySelector(".results").innerHTML = "PLAYER 2 WINS THE MATCH";
+    document.querySelector(".results").innerHTML = "PLAYER 2 WINS THE MATCH !!!";
 }
 
-// Add a grid under the class scoreboard
+// Adding a grid under the class scoreboard
 var scoreboard = document.querySelector(".scoreboard");
-var gridContent=` 
+var gridContent=`
     <div class="grid">
         <div class="cell">Player 1</div>
-        <div class="cell">Player 2</div>
-`;   
+        <div class="cell">Player 2</div> 
+`;
 for( var i = 0; i<4 ; i++){
-    if(x>y){
-        gridcontent +=`
+    if (x>y){
+        gridContent +=`
             <div class="cell">W</div>
             <div class="cell">L</div>
         `;
     }
     else if(y>x){
-        gridcontent +=`
+        gridContent +=`
             <div class="cell">L</div>
             <div class="cell">w</div>
         `;
     }
     if(x===y){
-        gridcontent +=`
+        gridContent +=`
             <div class="cell">D</div>
             <div class="cell">D</div>
         `;
@@ -62,7 +47,7 @@ for( var i = 0; i<4 ; i++){
     gridContent += `</div>`
 }
 scoreboard.innerHTML=gridContent;
-// Add CSS for the grid
+// Adding CSS for the grid
 var style = document.createElement("style");
 style.innerHTML = `
     .grid {
