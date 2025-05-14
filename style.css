@@ -20,6 +20,19 @@ h1{
     justify-items: center;
 }
 
+.roll{
+    display:flex;
+    justify-items: center;
+    padding-bottom: 100px;
+
+}
+button{
+    background-color: #d4dc45;
+    justify-items: center;
+    width:200px;
+    height: 60px;
+}
+
 h3,h2,h4{
     color:#0118D8;
     
