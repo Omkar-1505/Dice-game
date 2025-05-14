@@ -1,15 +1,36 @@
-var x = Math.floor(Math.random() * 6) + 1;
-document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
+var n;
+function c1(){
+    n=1;
+}
+function c3(){
+    n=3;
+}
+function c5(){
+    n=5;
+}
+function c7(){
+    n=7;
+}
+function c9(){
+    n=9;
+}
+var i = 1;
+var x;
+var y;
+function rollme(){
+    x = Math.floor(Math.random() * 6) + 1;
+    document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
 
-var y = Math.floor(Math.random() * 6) + 1;
-document.querySelector(".player2img").innerHTML = '<img src="images/dice' + y + '.png">';
+    y = Math.floor(Math.random() * 6) + 1;
+    document.querySelector(".player2img").innerHTML = '<img src="images/dice' + y + '.png">';
 
-if (x === y) {
-    document.querySelector(".results").innerHTML = "IT IS A DRAW";
-} else if (x > y) {
-    document.querySelector(".results").innerHTML = "PLAYER 1 WINS THE MATCH !!!";
-} else {
-    document.querySelector(".results").innerHTML = "PLAYER 2 WINS THE MATCH !!!";
+    if (x === y) {
+        document.querySelector(".results").innerHTML = "IT IS A DRAW";
+    } else if (x > y) {
+        document.querySelector(".results").innerHTML = "PLAYER 1 WINS THE MATCH !!!";
+    } else {
+        document.querySelector(".results").innerHTML = "PLAYER 2 WINS THE MATCH !!!";
+    }
 }
 var c;
 var d;
@@ -20,7 +41,8 @@ var gridContent=`
         <div class="cell">Player 1</div>
         <div class="cell">Player 2</div> 
 `;
-for( var i = 0; i<4 ; i++){
+while(i<=n){
+    document.querySelector("button").addEventListener("click",rollme());
     if (x>y){
         gridContent +=`
             <div class="cell">W</div>
@@ -48,7 +70,37 @@ for( var i = 0; i<4 ; i++){
         `;
     }
     gridContent += `</div>`
+    i++;
 }
+/*for( var i = 0; i<4 ; i++){
+    if (x>y){
+        gridContent +=`
+            <div class="cell">W</div>
+            <div class="cell">L</div>
+        `;
+        c+=1;
+    }
+    else if(y>x){
+        gridContent +=`
+            <div class="cell">L</div>
+            <div class="cell">w</div>
+        `;
+        d+=1;
+    }
+    if(x===y){
+        gridContent +=`
+            <div class="cell">D</div>
+            <div class="cell">D</div>
+        `;
+    }
+    else{
+        gridContent+=`
+            <div class="cell">Not Working</div>
+            <div class="cell">Not Working</div>
+        `;
+    }
+    gridContent += `</div>`
+}*/
 scoreboard.innerHTML=gridContent;
 // Adding CSS for the grid
 var style = document.createElement("style");
