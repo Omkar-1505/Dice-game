@@ -1,18 +1,25 @@
-var n;
-function c1(){
-    n=1;
-}
-function c3(){
-    n=3;
-}
-function c5(){
-    n=5;
-}
-function c7(){
-    n=7;
-}
-function c9(){
-    n=9;
+var n; //the events contuining
+var value=1;
+function event(){
+    switch(value){
+        case 1:
+            n=1
+            break;
+        case 3:
+            n=3
+            break;
+        case 5:
+            n=5
+            break;
+        case 7:
+            n=7
+            break;
+        case 9:
+            n=9
+            break;
+        case _:
+            n=1;
+    }  
 }
 var i = 1;
 var x;

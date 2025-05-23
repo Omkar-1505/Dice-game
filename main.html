@@ -10,12 +10,12 @@
     <body> 
         <div class="input">
            <h3>CHOOSE THE NUMBER GAMES YOU WANT <br> DISCLAIMER RANGE LIES BETWEEN 1-9</h3> 
-            <select class="events">
-                <option onclick="c1()">1</option>
-                <option onclick="c3()">3</option>
-                <option onclick="c5()">5</option>
-                <option onclick="c7()">7</option>
-                <option onclick="c9()">9</option>
+            <select class="events" onchange="event(this)">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="9">9</option>
             </select>
         </div>
         <h2 class="results">GET SET GO </h2>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="roll">
-            <button>ROLL ME !!!</button>
+            <button onclick="rollme()">ROLL ME !!!</button>
         </div>
         <footer>    
             <h4> BUILT WITH LOVE BY OMKAR PADHEE </h4>
