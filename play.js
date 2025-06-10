@@ -1,5 +1,4 @@
 var n; //the events contuining
-var value=1;
 function event(){
     switch(value){
         case 1:
@@ -15,21 +14,23 @@ function event(){
             n=7
             break;
         case 9:
-            n=9
+            n=9 
             break;
         case _:
             n=1;
     }  
 }
+if(!n) n=1;
 var i = 1;
 var x;
 var y;
 function rollme(){
     x = Math.floor(Math.random() * 6) + 1;
-    document.querySelector(".player1img").innerHTML = '<img src="images/dice' + x + '.png">';
+    r=document.querySelector(".player1img").src= `images/dice${x}.png`;;
+    
 
     y = Math.floor(Math.random() * 6) + 1;
-    document.querySelector(".player2img").innerHTML = '<img src="images/dice' + y + '.png">';
+    p=document.querySelector(".player2img").src = `images/dice${y}.png`;
 
     if (x === y) {
         document.querySelector(".results").innerHTML = "IT IS A DRAW";
