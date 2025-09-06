@@ -10,5 +10,35 @@
     text-align: center;
 }
 .play{
-    padding: 30px 30px 30px 30px;
+    background-color: #FFF;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(58, 134, 255, 0.08);
+    padding: 30px;
+}
+
+button {
+    background-color: #3A86FF;
+    color: #FFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+button:hover {
+    background-color: #8338EC;
+}
+
+input, select {
+    border: 2px solid #FFBE0B;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.result {
+    color: #FF006E;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
