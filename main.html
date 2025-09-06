@@ -1,46 +1,24 @@
 <!DOCTYPE html>
- <html lang="en" dir="ltr">
-    <title> DICE GAME</title>
-    <head>
-        <meta charset="utf-8"> <h1>
-        WELCOME EVERYONE TO THE 2-PLAYER DICE GAME TO GO FOR A DECISION TAKING ROUND.
-        </h1>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body> 
-        <div class="input">
-           <h3>CHOOSE THE NUMBER GAMES YOU WANT <br> DISCLAIMER RANGE LIES BETWEEN 1-9</h3> 
-            <select class="events" onchange="event(this)">
-                <option value="1">1</option>
-                <option value="3">3</option>
-                <option value="5">5</option>
-                <option value="7">7</option>
-                <option value="9">9</option>
-            </select>
-        </div>
-        <h2 class="results">GET SET GO </h2>
-        <h2>REFRESH ME FOR A NEW START</h2>
-        <div class="scoreboard">
-            <h4>PLAYER 1</h4>
-            <h4>PLAYER 2</h4>
-        </div>
-        <div class="playzone">
-            <div class="player 1">
-                <h3> PLAYER 1</h3> 
-                <img class="player1img" src = "images/dice6.png">
-            </div>
-            <div class="player 2">
-                <h3> PLAYER 2 </h3>
-                <img class="player2img" src = "images/dice6.png">
-            
-            </div>
-        </div>
-        <div class="roll">
-            <button onclick="rollme()">ROLL ME !!!</button>
-        </div>
-        <footer>    
-            <h4> BUILT WITH LOVE BY OMKAR PADHEE </h4>
-        </footer>
-        <script src="play.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DICE GAME</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <h1 CLASS="result">WELCOME TO THE GAME</h1>
+</head>
+<body>
+    <div class="play">
+        <select class="type" onchange="play_type(this)">
+            <option value="1">SINGLE PLAYER</option>
+            <option value="2">DUAL PLAYERS</option>
+        </select>
+           <div class="name"></div>
+    </div>
+    <div class="game">
+        <img src="images/dice6.png" alt="Dice">
+        <img src="images/dice6.png" alt="Dice 2">
+    </div>
+    <script src="play.js"></script>
+</body>
 </html>

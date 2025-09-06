@@ -1,45 +1,14 @@
 *{
-    background-color: #C68EFD;
-    font-family:'Times New Roman', Times, serif;
-    justify-content: center;
+    background-color: #FF3EA5;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.title{
+    display:flex;
     text-align: center;
 }
- 
-h1{
-    color:#0f6e4d;
-    justify-content: center;
-    padding-bottom: 5%;
-}
-.player {
-    padding: 10% 15% 10% 15%;
-
-}
-
-.playzone {
-    display: flex;
-    justify-items: center;
-}
-
-.roll{
-    display:flex;
-    justify-items: center;
-    padding-bottom: 100px;
-
-}
-button{
-    background-color: #d4dc45;
-    justify-items: center;
-    width:200px;
-    height: 60px;
-}
-
-h3,h2,h4{
-    color:#0118D8;
-    
-}
-.scoreboard{
-    display: grid;
-}
-.events{
-    width: 200px;
+.play{
+    padding: 30px 30px 30px 30px;
 }
