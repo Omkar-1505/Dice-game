@@ -5,18 +5,26 @@
 
 
 
-.title{
+.result{
+    color:#db1846;
     display:flex;
     text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 .play{
-    background-color: #FFF;
-    border-radius: 16px;
+    display:flex;
+    justify-content: center;
+    gap: 10px;
     box-shadow: 0 2px 12px rgba(58, 134, 255, 0.08);
     padding: 30px;
 }
 
 button {
+    /* display: flex;
+    justify-content: center; */
+    border-radius: 15%;
     background-color: #3A86FF;
     color: #FFF;
     border: none;
@@ -30,15 +38,22 @@ button:hover {
 }
 
 input, select {
+    /* display: flex;
+    justify-content: center; */
     border: 2px solid #FFBE0B;
-    border-radius: 6px;
     padding: 8px;
     margin-bottom: 10px;
 }
-
-.result {
-    color: #FF006E;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+.game{
+    display:flex;
+    justify-content: center;
+    gap: 125px;
 }
+h3 {
+    color: #0862de; 
+    display: bo; 
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
